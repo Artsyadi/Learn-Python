@@ -1,0 +1,55 @@
+-----------------100 Days of Python-------------
+Day-2: - Control Flow and Logical Statements
+
+Comparison Operator - ( >=, <=, ==, !=)
+
+1) Conditional Statement - 
+a) Syntax-- (if...else)
+if condition:
+    expression
+else:
+    expression
+
+b) Syntax-- (nested if/else)
+if condition:
+    if condition:
+        expression
+    else:
+        expression
+else:
+    expression
+
+c) Syntax-- (if/elif/else)
+if condition:
+    expression
+elif condition:
+    expression
+else:
+    expression
+
+d) Syntax-- (Multiple if)
+if condition:
+    expression
+if condition:
+    expression
+
+2) Logical Operators -
+A and B --> returns True only if both the arguments are Ture, otherwise false
+A or B --> returns True if either of the two arguments is True or Both are True, it will return false only if both arguments are False
+not A --> returns the reverse output, if A is True it will return False and vice-versa
+
+3) Some functions - 
+
+a) lower function - returns a string all in lower case
+txt = "Hello my FRIENDS"
+x = txt.lower()
+print(x) --> #Output = hello my friends
+
+b) upper function - returns a string all in upper case
+txt = "Hello my FRIENDS"
+x = txt.upper()
+print(x) --> #Output = HELLO MY FRIENDS
+
+c) count function - returns the count 
+name = "aditya
+x = name.count("a") --> Output = 2, returned count of a
