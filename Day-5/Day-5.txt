@@ -1,0 +1,69 @@
+------------For Loop in Python--------------
+A for loop in Python is a control flow statement used to iterate over a sequence of elements, 
+such as a list, tuple, string, or any iterable object. 
+It allows you to execute a block of code repeatedly for each element in the sequence.
+
+Key Features of for Loops
+1) Iterative:
+The for loop iterates over each item in a sequence, processing one element at a time.
+
+2) Flexible:
+It can loop through any iterable, including lists, tuples, strings, dictionaries, and even custom iterable objects.
+
+3) Simple Syntax:
+The for loop is easy to use and understand, making it a fundamental construct in Python programming.
+--------Syntax---------------------------
+for 'variable' in 'sequence':
+    # Code block to be executed
+
+variable: Represents the current item in the sequence during each iteration.
+sequence: The collection of items (e.g., list, tuple, string) over which the loop iterates.
+Code block: The indented block of code that runs for each item in the sequence.
+
+Example -
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:    | Output - apple
+    print(fruit)        |          banana
+                        |          cherry
+------------------------------------------
+
+4) Using range() in a for Loop
+The range() function generates a sequence of numbers, which is commonly used with for loops.
+-----------Code-----------------
+# Looping through a range of numbers from 0 to 4
+for i in range(5):
+    print(i)
+
+Output--0,1,2,3,4
+--------------------------------
+
+5) Nested for Loops
+You can nest for loops to iterate over multi-dimensional data structures like nested lists.
+-------------Code-----------
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for row in matrix:
+    for item in row:
+        print(item, end=" ")
+    print()  # Newline after each row
+------------------------------------------------
+
+6) for Loop with else
+The else clause in a for loop executes after the loop completes normally, without encountering a break statement.
+----------------Code----------------
+for i in range(3):
+    print(i)
+else:
+    print("Loop completed without a break.")
+
+Output -
+0
+1
+2
+Loop completed without a break.
+----------------------------------
