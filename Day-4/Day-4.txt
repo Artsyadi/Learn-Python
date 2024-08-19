@@ -1,0 +1,132 @@
+-----Randomization and Lists in Python------
+
+How to create your own Module in python --
+Creating your own module in Python is a straightforward process. 
+A module in Python is simply a file containing Python code, which can include functions, classes, variables, and runnable code. 
+Here's a brief guide:
+
+Steps to Create Your Own Python Module
+a)Create a Python File:
+Start by creating a new Python file with a .py extension. For example, you can create a file named mymodule.py.
+
+b)Write Code in the Module:
+Inside mymodule.py, write any functions, classes, or variables you want to include in your module.
+
+c)Save the File:
+Save your mymodule.py file in the same directory where you plan to use it, or in any directory that is in your Python path.
+
+d)Import and Use the Module in Another Script:
+In another Python script or an interactive Python session, you can import and use your custom module.
+
+-------------------------------------------
+1) random — Generate pseudo-random numbers (Study more about random module - https://docs.python.org/3/library/random.html)
+
+This module implements pseudo-random number generators for various distributions.
+For integers, there is uniform selection from a range. For sequences, there is uniform selection of a random element, 
+a function to generate a random permutation of a list in-place, and a function for random sampling without replacement.
+Python uses the Mersenne Twister as the core generator. It produces 53-bit precision floats and has a period of 2**19937-1.
+Link to the  mersenne Twister - https://en.wikipedia.org/wiki/Mersenne_Twister
+
+TO use the random module from python, first import the random module
+# import random 
+# random.randint(a, b) --> Return a random integer N such that a <= N <= b. Alias for randrange(a, b+1).
+# random.random() --> Return the next random floating-point number in the range 0.0 <= X < 1.0
+# random.uniform(a, b) --> Return a random floating-point number N such that a <= N <= b for a <= b and b <= N <= a for b < a.
+# random.choice(seq) --> Return a random element from the non-empty sequence seq. If seq is empty, raises IndexError.
+
+2)------Python Lists-------(Study more about Lists - https://docs.python.org/3/tutorial/datastructures.html)
+In Python, a list is a versatile and powerful data structure used to store an ordered collection of items. 
+These items can be of any data type, including integers, floats, strings, or even other lists. Indexing start from 0.
+
+Key Features of Lists :-
+a) Ordered:
+Lists maintain the order of elements, meaning the items have a defined sequence and can be accessed by 
+their position (index) in the list.
+
+b) Mutable:
+Lists can be modified after creation. You can change, add, or remove elements.
+
+c) Dynamic:
+Lists in Python can grow or shrink in size as you add or remove elements.
+
+d) Heterogeneous:
+A list can contain elements of different data types (e.g., integers, strings, floats, etc.).
+
+e) Creating a List -
+You can create a list by placing a comma-separated sequence of items within square brackets []. 
+-----------------Code----------------------
+# An empty list
+empty_list = []
+
+# A list of integers
+numbers = [1, 2, 3, 4, 5]
+
+# A list of strings
+fruits = ["apple", "banana", "cherry"]
+
+# A mixed list
+mixed = [1, "hello", 3.14, True]
+-------------------------------------------
+f) Accessing Elements -
+Elements in a list can be accessed using their index, which starts at 0 for the first element.
+--------------Code--------------------
+# Accessing the first element
+print(fruits[0])  # Output: apple
+
+# Accessing the last element
+print(fruits[-1])  # Output: cherry
+----------------------------------------------
+
+3) Nested List -
+Nested lists in Python are lists that contain other lists as their elements. 
+This allows you to create complex, multi-dimensional data structures, such as matrices or tables, within a list.
+
+Key Features of Nested Lists
+a) Hierarchical Structure:
+A nested list is essentially a list within a list. Each element in the main list can itself be a list, creating multiple levels of hierarchy.
+
+b) Multi-dimensional Data Representation:
+Nested lists are often used to represent 2D data structures like matrices, grids, or tables.
+
+c) Flexible Depth:
+Lists can be nested to any depth, meaning you can have lists within lists, within lists, and so on.
+
+d) Creating a Nested List:
+You can create a nested list by placing lists inside another list.
+------------Code-------------------------
+# A simple 2D list (a list of lists)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# A nested list with mixed types
+nested_list = [
+    [1, 2, 3],
+    ["a", "b", "c"],
+    [True, False, None]
+]
+---------------------------------------------
+
+e) Accessing Elements in a Nested List
+To access elements in a nested list, you use multiple indices. 
+The first index refers to the outer list, and the second index refers to the inner list.
+------------------------Code------------
+# Accessing elements in a nested list
+print(matrix[0][0])  # Output: 1
+print(matrix[1][2])  # Output: 6
+print(nested_list[2][1])  # Output: False
+--------------------------------------
+
+f) Modifying Elements in a Nested List
+You can modify elements at any level of a nested list just like with regular lists.
+-----------------Code-----------------
+# Changing an element in a nested list
+matrix[1][2] = 10
+print(matrix)  # Output: [[1, 2, 3], [4, 5, 10], [7, 8, 9]]
+
+# Modifying an entire sublist
+matrix[2] = [0, 0, 0]
+print(matrix)  # Output: [[1, 2, 3], [4, 5, 10], [0, 0, 0]]
+-------------------------------------------
