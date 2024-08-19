@@ -1,0 +1,11 @@
+-----------------100 Days of Python-------------
+
+Day-1: -
+
+Print Modifiers - 
+print("She said: "Hello" and then left.") #Does not print the word Hello
+print('She said: "Hello" and then left.') #prints the word Hello
+print("She said: \"Hello\" and then left.") #prints the word Hello
+
+String Concatenation - 
+print("Hello" + " " + "Aditya") --> Output - Hello Aditya
