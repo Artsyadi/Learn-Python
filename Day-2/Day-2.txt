@@ -1,0 +1,70 @@
+-----------------100 Days of Python-------------
+Day-2: -
+
+1)Primitive Datatypes --
+a) String - 
+print("Hello"[0]) #Output --> H , it fetches the 0th index of the string, this is called subscripting
+print("Hello"[4]) #Output --> o
+print("123"+"345") #Output --> 123345
+
+b) Integer -
+print(123+345) #output --> 468, it can be specified by the 'int' datatype
+123_345_567 --> interpreted as 123345567, it takes _ as the , symbol
+
+c) Float -
+print(3.14) --> decimal numbers are Float
+
+d) Boolean - 
+True -- 1
+False -- 0
+
+len() function --> returns the length of the string in an integer value
+len("hello") --> Output = 5
+
+type() function --> give the datatype of the variable
+num = 56
+type(num) --> #Output - class int
+
+2)Type Error -- 
+num_char = len(input("What is your name?))
+print("Your name is"+num_char+"characters") --> type error, as string cannot be concatenated with int
+
+3)TypeCasting --
+num_char = len(input("What is your name?)) - Aditya
+new = str(num_char) --> Typecasting int into String
+print("Your name is"+num_char+"characters") --> Output- Your name is 6 characters
+
+num = float(123) / str(123) 
+type(num) --> Output - class float / class String
+
+4)Mathematical operators - 
+addition --> 3+3
+subtraction --> 5-3
+multiplication --> 3*5
+division --> 6/2 #gives answer in float value, Output=3.0, returns the quotient value
+modulus --> 6 % 2 #Output = 0, returns the remainder as an output
+power --> 2**3 #Output = 8, the first digit raised to the second digit -- 2^3
+floor division --> 8 // 3 #Output = 2, returns the floor value of the calculation 
+
+precedence --> PEMDAS Left to Right --> () > ** > * / > + -
+3*3+3/3-3 --> Output = 7 
+3*(3+3)/3-3 --> Output = 3  
+
+5) Number manipulation amd F string - 
+round() function --> returns the rounded up number 
+print(round(8/3)) --> Output = 3
+print(round(8/3 ,2)) --> Output = 2.67, if we specify the digit to round up to it will return the number rounded up to that decimal place
+
+Operations - can be written as
+a = a+1 --> a += 1
+a = a-1 --> a -= 1
+a = a*1 --> a *= 1
+a = a/1 --> a /= 1
+
+F-String - 
+When we want to print multiple datatypes without typecasting them we use f-string
+score=10
+height=180
+win = True
+print(f"score = {score}, height = {height}, win = {win}") --> we added a f at start of the statement
+Output --> score = 10, height = 180, win = True
