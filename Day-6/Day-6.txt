@@ -1,0 +1,193 @@
+------------Functions, Code Blocks and while loops---------------
+1) Functions 
+
+Link for Built-in functions in python - https://docs.python.org/3/library/functions.html
+
+User Defined functions -
+User-defined functions in Python allow you to create reusable blocks of code that can be called whenever needed. 
+Functions help organize code, make it more readable, and reduce repetition.
+
+Key Features of Functions
+a) Reusable:
+Functions can be called multiple times with different inputs, reducing code duplication.
+
+b) Modular:
+Functions help break down complex problems into smaller, manageable parts.
+
+c) Customizable:
+Functions can take arguments (inputs) and return results (outputs), allowing for flexible code.
+
+d) Creating a Function
+To create a function, you use the def keyword followed by the function name and parentheses ().
+-----------------Code---------------
+def function_name(parameters):
+    """
+    Optional docstring that describes the function.
+    """
+    # Code block (function body)
+    return result  # Optional
+
+'function_name': The name of the function, which should be descriptive and follow Python naming conventions 
+                 (e.g., lowercase with underscores).
+'parameters': Optional, used to pass inputs into the function. These are variables that you define within the parentheses.
+'docstring': Optional, used to describe what the function does. It's a good practice for documentation.
+'return': Optional, used to return a value from the function. If not provided, the function returns None by default.
+---------------------------------------------
+
+Example 1: A Simple Function 
+---------------Code---------------------
+def greet():
+    print("Hello, Aditya!")
+
+# Calling the function
+greet() --> Output - Hello, Aditya!
+-----------------------------------------
+
+Example 2: Function with Parameters
+Functions can take parameters to work with different inputs.
+------------------------Code------------
+def greet(name):
+    print(f"Hello, {name}!")
+
+# Calling the function with different arguments
+greet("Alice") --> Output - Hello, Alice!
+greet("Bob") --> Output - Hello, Bob!
+---------------------------------------
+
+Example 3: Function with a Return Value
+Functions can return a value using the return statement.
+---------------Code-------------------
+def add(a, b):
+    return a + b
+
+# Calling the function and storing the result
+result = add(5, 7)
+print(result)  # Output: 12
+------------------------------------------
+
+Example 4: Function with Default Parameters
+You can define default values for parameters. If a value is not provided, the default is used.
+---------------------------Code---------------
+def greet(name="Aditya"):
+    print(f"Hello, {name}!")
+
+# Calling the function without arguments
+greet()  # Output: Hello, Aditya!
+
+# Calling the function with an argument
+greet("Roshan")  # Output: Hello, Roshan!
+---------------------------------------------
+
+Example 5: Function with Multiple Return Values
+Functions can return multiple values as a tuple.
+--------------Code------------------------------
+def get_min_max(numbers):
+    return min(numbers), max(numbers)
+
+# Calling the function
+min_val, max_val = get_min_max([2, 5, 1, 9, 4])
+print(f"Min: {min_val}, Max: {max_val}")  # Output: Min: 1, Max: 9
+-----------------------------------------------
+
+Example 6: Using *args and **kwargs
+*args: Allows the function to accept any number of positional arguments.
+**kwargs: Allows the function to accept any number of keyword arguments.
+-------------------Code---------------------
+def print_numbers(*args):
+    for number in args:
+        print(number)
+
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Calling functions
+print_numbers(1, 2, 3, 4)  # Output: 1 2 3 4
+print_info(name="Alice", age=30)  # Output: name: Alice, age: 30
+-------------------------------------------
+
+2) while Loops 
+A while loop in Python repeatedly executes a block of code as long as a specified condition is true. 
+It is particularly useful when the number of iterations is not known in advance and depends on a condition 
+being met during execution.
+
+Key Features of while Loops
+a) Condition-Based:
+The loop continues as long as the given condition is True.
+
+b) Potential for Infinite Loops:
+If the condition never becomes False, the loop will run indefinitely. 
+Careful attention to the loop condition is necessary to avoid infinite loops.
+
+c) Flexible:
+You can use while loops for a variety of tasks, such as waiting for user input, 
+processing data until a condition is met, or repeatedly checking a condition.
+
+---------------------Basic Syntax------------------
+while condition:
+    # Code block to be executed repeatedly
+
+condition: A boolean expression that is evaluated before each iteration. 
+           If it is True, the loop body executes; if it is False, the loop stops.
+----------------------------------------------------
+
+Example 1: Basic while Loop
+------------Code-------------------------
+# Loop until x is less than 5
+x = 0
+
+while x < 5:
+    print(x) --> Output - 0,1,2,3,4
+    x += 1  # Increment x by 1 on each iteration
+------------------------------------
+
+Example 2: Using while Loop for User Input
+You can use a while loop to repeatedly ask for user input until a valid response is given.
+-------------------Code---------------
+# Keep asking for input until the user enters a positive number
+number = -1
+
+while number <= 0:
+    number = int(input("Enter a positive number: "))
+
+print(f"You entered: {number}")
+----------------------------------------
+
+Example 3: Breaking Out of a while Loop
+The break statement can be used to exit a while loop immediately, even if the condition is still True.
+--------------------Code------------------
+# Find the first number greater than 50 that is divisible by 7
+x = 1
+
+while True:
+    if x > 50 and x % 7 == 0:
+        print(f"The number is: {x}")
+        break  # Exit the loop when the condition is met
+    x += 1
+--------------------------------------------
+
+Example 4: while Loop with else
+The else block in a while loop runs after the loop finishes, but only if the loop wasn’t terminated by a break statement.
+------------------Code-------------------
+count = 0
+
+while count < 3:
+    print(f"Count is {count}")
+    count += 1
+else:
+    print("Loop completed without a break.")
+
+# Output-->
+Count is 0
+Count is 1
+Count is 2
+Loop completed without a break.
+
+----------------------------------------------
+
+Example 5: Infinite Loops
+An infinite loop runs indefinitely because the loop condition never becomes False. 
+This is generally undesirable unless intentionally used (e.g., for a server that should run continuously).
+To avoid an infinite loop:
+    Ensure the loop condition will eventually become False.
+    Use break statements wisely to exit the loop when needed.
