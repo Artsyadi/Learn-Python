@@ -14,7 +14,7 @@ print(placeholder)
 correct_letter = []
 game_over = 0
 while game_over==0:
-    print(f"---------You have {lives} left-----------")
+    print(f"---------You have {lives} lives left-----------")
     guess = input("Guess the letter: ").lower()
     print(guess)
 
