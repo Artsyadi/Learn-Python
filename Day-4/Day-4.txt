@@ -17,6 +17,7 @@ Save your mymodule.py file in the same directory where you plan to use it, or in
 
 d)Import and Use the Module in Another Script:
 In another Python script or an interactive Python session, you can import and use your custom module.
+Everything you need to know about the python import statement - https://www.askpython.com/python/python-import-statement
 
 -------------------------------------------
 1) random — Generate pseudo-random numbers (Study more about random module - https://docs.python.org/3/library/random.html)
