@@ -1,0 +1,82 @@
+---------Function, Arguments / Parameters and Ceaser Cipher---------
+
+In Python, functions can accept two types of arguments: positional arguments and keyword arguments. 
+Understanding how to use these arguments allows for more flexible and readable code.
+
+1) Positional Arguments - 
+Positional arguments are the most common way to pass arguments to a function. 
+They are passed in the order defined by the function's parameters, and the values are assigned 
+to the corresponding parameters based on their position.
+--------------Code--------------
+def describe_person(name, age, city):
+    print(f"{name} is {age} years old and lives in {city}.")
+
+# Positional arguments
+describe_person("Alice", 30, "New York") --> Output - Alice is 30 years old and lives in New York.
+----------------------------------
+
+2) Keyword Arguments
+Keyword arguments are passed to the function by explicitly specifying the parameter names along with their values. 
+This allows you to pass arguments in any order and makes the code more readable.
+----------------Code---------------
+def describe_person(name, age, city):
+    print(f"{name} is {age} years old and lives in {city}.")
+
+# Keyword arguments
+describe_person(age=30, city="New York", name="Alice") --> Output - Alice is 30 years old and lives in New York.
+
+Here, the arguments are passed in a different order, but the function still 
+works correctly because the parameter names are explicitly mentioned.
+---------------------------------------
+
+3) Combining Positional and Keyword Arguments
+You can mix positional and keyword arguments when calling a function. 
+However, positional arguments must come before keyword arguments.
+-------------------------Code---------------
+def describe_person(name, age, city):
+    print(f"{name} is {age} years old and lives in {city}.")
+
+# Combining positional and keyword arguments
+describe_person("Alice", city="New York", age=30) --> Output - Alice is 30 years old and lives in New York.
+-----------------------------------------------
+
+4) Default Values with Keyword Arguments
+You can provide default values for function parameters, making them optional when calling the function. 
+If a value is not provided, the default value is used.
+----------------------Code-------------
+def describe_person(name, age, city="Unknown"):
+    print(f"{name} is {age} years old and lives in {city}.")
+
+# Using default value for city
+describe_person("Alice", 30) --> Output - Alice is 30 years old and lives in Unknown.
+
+# Overriding the default value
+describe_person("Bob", 25, "San Francisco")--> Output - Bob is 25 years old and lives in San Francisco.
+-------------------------------------------
+
+5) Variable-Length Arguments
+*args: Allows you to pass a variable number of positional arguments.
+**kwargs: Allows you to pass a variable number of keyword arguments.
+-----------------------------Code----------------
+def greet(*names):
+    for name in names:
+        print(f"Hello, {name}!")
+
+def print_details(**details):
+    for key, value in details.items():
+        print(f"{key}: {value}")
+
+# Using *args
+greet("Alice", "Bob", "Charlie")
+
+# Using **kwargs
+print_details(name="Alice", age=30, city="New York")
+
+--> Output - 
+Hello, Alice!
+Hello, Bob!
+Hello, Charlie!
+name: Alice
+age: 30
+city: New York
+-------------------------------------------------------
